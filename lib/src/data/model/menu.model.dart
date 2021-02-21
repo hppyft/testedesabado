@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MenuModel {
-  IconData _iconData;
-  String _text;
-  String _url;
+  IconData iconData;
+  String text;
+  String url;
 
-  MenuModel(this._iconData, this._text, this._url);
+  MenuModel(this.iconData, this.text, this.url);
 }

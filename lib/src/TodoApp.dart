@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:teste_de_sabado/src/presentation/routes.dart';
 import 'package:teste_de_sabado/src/presentation/screen/HomeScreen.dart';
 
 class TodoApp extends StatelessWidget {
+  TodoAppRouter routes;
+  TodoApp(this.routes);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -9,7 +13,7 @@ class TodoApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.purple,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: HomeScreen(),
+      onGenerateRoute: routes.onGenerateRoute,
     );
   }
 }
